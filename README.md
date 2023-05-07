@@ -4,4 +4,4 @@
 最为记录打算上传到这里
 这个依赖的是MongoDB这个数据库
 我使用的系统是Windows8.1，MongoDB4.0，Python3.11（pip3）
-在此项目成功运行之后html的danmaku信息填入api: 'http://host:200/',就可以使用了
+在此项目成功运行之后html的danmaku信息填入 api: 'http://host:200/' 就可以使用了
