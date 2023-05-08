@@ -1,13 +1,11 @@
 import sys
 import threading
 import subprocess
-from flask import Flask
-from flask import Flask, request, jsonify
+import json
+from flask import Flask, request, jsonify, Response
 from flask_cors import CORS
 from flask_pymongo import PyMongo
-import json
 from urllib.parse import unquote
-from flask import Response
 
 app = Flask(__name__)
 
@@ -15,6 +13,10 @@ CORS(app)
 app.config['MONGO_URI'] = 'mongodb://localhost:27017/danmaku'
 mongo = PyMongo(app)
 
+@app.route("/")
+def hello():
+    return "这是一个DPlayer的弹幕API<br><a href='https://github.com/XiaoTong6666/DPlayer-Danmaku-Python-Server'>项目地址</a>"
+    
 @app.route('/v3/', methods=['POST'])
 def save_danmaku():
     data = request.json
