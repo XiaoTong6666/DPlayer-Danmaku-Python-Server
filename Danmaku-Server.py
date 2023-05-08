@@ -69,4 +69,3 @@ def main(argv):
 if __name__ == "__main__":
     print(f"Python {sys.version.split()[0]} {64 if sys.maxsize > 0x100000000 else 32}-bit on {sys.platform}\n")
     main(sys.argv[1:])
-    print("\nDone.")
